@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_angular/src/routes/fade_transitions.dart';
 import '../screens/home/index.dart';
 import '../screens/profile/index.dart';
 
@@ -9,9 +10,9 @@ class AppRoutes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case home:
-        return MaterialPageRoute(builder: (_) => const HomeScreen());
+        return FadePageRoute(page: const HomeScreen());
       case profile:
-        return MaterialPageRoute(builder: (_) => const ProfileScreen());
+        return FadePageRoute(page: const ProfileScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => const Scaffold(
