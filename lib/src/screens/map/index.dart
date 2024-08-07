@@ -11,11 +11,11 @@ class MapScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Container(
+          SizedBox(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * 1 / 2,
             child: Image.asset(
-              'assets/mapscreen_header.png',
+              'assets/imgs/mapscreen_header.png',
               fit: BoxFit.cover,
             ),
           ),

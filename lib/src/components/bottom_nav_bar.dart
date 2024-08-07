@@ -19,7 +19,7 @@ class BottomNavBar extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: const Icon(Icons.map),
+            icon: const Icon(Icons.location_on),
             color: Colors.white,
             onPressed: () {
               Navigator.of(context).pushNamed(AppRoutes.map);
