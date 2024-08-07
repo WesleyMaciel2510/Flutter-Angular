@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'src/routes/index.dart';
-import 'package:flutter/services.dart'; 
+import 'package:flutter/services.dart';
+import 'package:flutter_angular/src/routes/index.dart';
 
 void main() {
   runApp(const MyApp());
-   SystemChrome.setSystemUIOverlayStyle(
+  SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-      statusBarColor: Color(0xFF6666FF), // Color of the status bar
-      statusBarIconBrightness: Brightness.light, // Status bar icons color
-      statusBarBrightness: Brightness.dark, // Status bar background brightness
+      statusBarColor: Color(0xFF6666FF),
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.dark,
     ),
   );
 }
@@ -20,17 +20,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Navigation',
-      debugShowCheckedModeBanner: false, 
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue, // This sets the AppBar color
+        primarySwatch: Colors.blue,
         appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xFF6666FF), // Hex color for AppBar
+          backgroundColor: Color(0xFF6666FF),
           titleTextStyle: TextStyle(
-            color: Colors.white, // Color of the AppBar title text
-            fontSize: 20, // Optionally, set the font size
+            color: Colors.white,
+            fontSize: 20,
           ),
           iconTheme: IconThemeData(
-            color: Colors.white, // Color of the AppBar icons (including back arrow)
+            color: Colors.white,
           ),
         ),
       ),
