@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_angular/src/components/buttons/icon_and_label_button.dart';
+import 'package:flutter_angular/src/components/Buttons/icon_and_label_button.dart';
 import 'package:flutter_angular/src/routes/index.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:logger/logger.dart';

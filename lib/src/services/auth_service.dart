@@ -8,7 +8,7 @@ import 'package:logger/logger.dart';
 var logger = Logger();
 
 class AuthService with ChangeNotifier {
-  bool _isAuthenticated = false;
+  bool _isAuthenticated = true;
   //bool _isEnvLoaded = false;
 
   bool get isAuthenticated => _isAuthenticated;
@@ -33,7 +33,8 @@ class AuthService with ChangeNotifier {
 
       //final String serverAddress = dotenv.get('localhost', fallback: 'localhost');
       final response = await http.post(
-        Uri.parse('http://localhost:8080/api/auth'),
+      Uri.parse('http://192.168.100.2:8080/api/auth'),
+        //Uri.parse('http://localhost:8080/api/auth'),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
         },

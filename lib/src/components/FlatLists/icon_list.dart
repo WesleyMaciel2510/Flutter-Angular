@@ -24,7 +24,7 @@ class IconList extends StatelessWidget {
           ),
         ),
         Container(
-          height: 120.0, // Adjust as needed
+          height: 120.0,
           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
           child: ListView.builder(
             scrollDirection: Axis.horizontal,

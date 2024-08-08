@@ -20,9 +20,9 @@ class IconAndLabelButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor: color,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8.0), // Adjust the rounding here
+          borderRadius: BorderRadius.circular(8.0),
         ),
-        padding: EdgeInsets.symmetric(vertical: 12.0), // Adjust padding as needed
+        padding: EdgeInsets.symmetric(vertical: 12.0),
       ),
       onPressed: onPressed,
       child: Row(
