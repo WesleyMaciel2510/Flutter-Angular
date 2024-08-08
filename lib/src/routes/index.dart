@@ -4,6 +4,7 @@ import '../screens/home/index.dart';
 import '../screens/map/index.dart';
 import '../screens/wallet/index.dart';
 import '../screens/profile/index.dart';
+import '../screens/explore/index.dart';
 import '../components/bottom_nav_bar.dart';
 
 class AppRoutes {
@@ -11,6 +12,7 @@ class AppRoutes {
   static const String map = '/map';
   static const String wallet = '/wallet';
   static const String profile = '/profile';
+  static const String explore = '/explore';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -36,6 +38,12 @@ class AppRoutes {
         return FadePageRoute(
           page: const AppScaffold(
             body: ProfileScreen(),
+          ),
+        );
+      case explore:
+        return FadePageRoute(
+          page: const AppScaffold(
+            body: ExploreScreen(),
           ),
         );
       default:

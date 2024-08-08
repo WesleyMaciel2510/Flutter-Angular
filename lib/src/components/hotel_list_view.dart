@@ -58,7 +58,7 @@ class HotelListView extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              color: HotelAppTheme.buildLightTheme()
+                              color: PlaceAppTheme.buildLightTheme()
                                   .colorScheme.surface,
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -103,7 +103,7 @@ class HotelListView extends StatelessWidget {
                                                 Icon(
                                                   FontAwesomeIcons.locationDot,
                                                   size: 12,
-                                                  color: HotelAppTheme
+                                                  color: PlaceAppTheme
                                                           .buildLightTheme()
                                                       .primaryColor,
                                                 ),
@@ -135,20 +135,20 @@ class HotelListView extends StatelessWidget {
                                                     ratingWidget: RatingWidget(
                                                       full: Icon(
                                                         Icons.star_rate_rounded,
-                                                        color: HotelAppTheme
+                                                        color: PlaceAppTheme
                                                                 .buildLightTheme()
                                                             .primaryColor,
                                                       ),
                                                       half: Icon(
                                                         Icons.star_half_rounded,
-                                                        color: HotelAppTheme
+                                                        color: PlaceAppTheme
                                                                 .buildLightTheme()
                                                             .primaryColor,
                                                       ),
                                                       empty: Icon(
                                                         Icons
                                                             .star_border_rounded,
-                                                        color: HotelAppTheme
+                                                        color: PlaceAppTheme
                                                                 .buildLightTheme()
                                                             .primaryColor,
                                                       ),
@@ -220,7 +220,7 @@ class HotelListView extends StatelessWidget {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Icon(
                                   Icons.favorite_border,
-                                  color: HotelAppTheme.buildLightTheme()
+                                  color: PlaceAppTheme.buildLightTheme()
                                       .primaryColor,
                                 ),
                               ),

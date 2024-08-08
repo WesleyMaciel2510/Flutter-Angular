@@ -25,7 +25,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: HotelAppTheme.buildLightTheme().colorScheme.surface,
+      color: PlaceAppTheme.buildLightTheme().colorScheme.surface,
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: Column(
@@ -61,7 +61,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
               child: Container(
                 height: 48,
                 decoration: BoxDecoration(
-                  color: HotelAppTheme.buildLightTheme().primaryColor,
+                  color: PlaceAppTheme.buildLightTheme().primaryColor,
                   borderRadius: const BorderRadius.all(Radius.circular(24.0)),
                   boxShadow: <BoxShadow>[
                     BoxShadow(
@@ -154,7 +154,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                   ),
                   CupertinoSwitch(
                     activeColor: date.isSelected
-                        ? HotelAppTheme.buildLightTheme().primaryColor
+                        ? PlaceAppTheme.buildLightTheme().primaryColor
                         : Colors.grey.withOpacity(0.6),
                     onChanged: (bool value) {
                       setState(() {
@@ -301,7 +301,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                                 ? Icons.check_box
                                 : Icons.check_box_outline_blank,
                             color: date.isSelected
-                                ? HotelAppTheme.buildLightTheme().primaryColor
+                                ? PlaceAppTheme.buildLightTheme().primaryColor
                                 : Colors.grey.withOpacity(0.6),
                           ),
                           const SizedBox(
@@ -369,7 +369,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
   Widget getAppBarUI() {
     return Container(
       decoration: BoxDecoration(
-        color: HotelAppTheme.buildLightTheme().colorScheme.surface,
+        color: PlaceAppTheme.buildLightTheme().colorScheme.surface,
         boxShadow: <BoxShadow>[
           BoxShadow(
               color: Colors.grey.withOpacity(0.2),

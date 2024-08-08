@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'explore_section.dart';
 
 class MapScreen extends StatelessWidget {
   const MapScreen({super.key});
@@ -20,12 +21,7 @@ class MapScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 12.0),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/profile');
-            },
-            child: const Text('Go to Profile'),
-          ),
+          const ExploreEventsSection(),
         ],
       ),
     );

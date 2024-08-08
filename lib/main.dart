@@ -39,3 +39,40 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+// ================= End of the MainApp ================================== 
+
+class ContestTabHeader extends SliverPersistentHeaderDelegate {
+  ContestTabHeader(
+    this.searchUI,
+  );
+  final Widget searchUI;
+
+  @override
+  Widget build(
+      BuildContext context, double shrinkOffset, bool overlapsContent) {
+    return searchUI;
+  }
+
+  @override
+  double get maxExtent => 52.0;
+
+  @override
+  double get minExtent => 52.0;
+
+  @override
+  bool shouldRebuild(SliverPersistentHeaderDelegate oldDelegate) {
+    return false;
+  }
+}
+
+class HexColor extends Color {
+  HexColor(final String hexColor) : super(_getColorFromHex(hexColor));
+
+  static int _getColorFromHex(String hexColor) {
+    hexColor = hexColor.toUpperCase().replaceAll('#', '');
+    if (hexColor.length == 6) {
+      hexColor = 'FF' + hexColor;
+    }
+    return int.parse(hexColor, radix: 16);
+  }
+}
