@@ -100,11 +100,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                    onPressed: () {
+                    onPressed: () async {
                       final email = _emailController.text;
                       final password = _passwordController.text;
                       logger.i('Login button pressed');
-                      authService.login(email, password);
+                        await authService.login(email, password);
 
                       // Navigate to home if login is successful
                       if (authService.isAuthenticated) {

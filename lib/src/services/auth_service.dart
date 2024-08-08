@@ -1,27 +1,69 @@
-import 'package:flutter/foundation.dart';
+import 'dart:convert';
+import 'dart:io';
+import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:http/http.dart' as http;
 import 'package:logger/logger.dart';
 
 var logger = Logger();
 
 class AuthService with ChangeNotifier {
   bool _isAuthenticated = false;
+  //bool _isEnvLoaded = false;
 
   bool get isAuthenticated => _isAuthenticated;
 
-  void login(String email, String password) {
-    logger.i('Login function called with email: $email and password: $password');
+  /* Future<void> _loadEnv() async {
+    if (!_isEnvLoaded) {
+    
+      try {
+        await dotenv.load(fileName: '.env');
+        _isEnvLoaded = true;
+        logger.i('Environment variables loaded');
+      } catch (e) {
+        logger.e('Failed to load .env file: $e');
+      }
+    }
+  } */
 
-    // Mock credentials
-    const mockEmail = 'wesley@gmail.com';
-    const mockPassword = 'casa123';
+  Future<void> login(String email, String password) async {
+    try {
+      logger.i('Login function called with email: $email and password: $password');
+      //await _loadEnv(); // Ensure .env file is loaded
 
-    // Simple mock authentication
-    if (email == mockEmail && password == mockPassword) {
-      _isAuthenticated = true;
-      logger.i('Login successful');
-    } else {
-      _isAuthenticated = false;
-      logger.i('Login failed: Incorrect email or password');
+      //final String serverAddress = dotenv.get('localhost', fallback: 'localhost');
+      final response = await http.post(
+        //Uri.parse('http://$serverAddress:8080/api/auth'),
+        Uri.parse('http://192.168.100.2:8080/api/auth'),
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: jsonEncode(<String, String>{
+          //TO TEST
+          //'email': 'wesley@gmail.com',
+          //'password': 'test123',
+          'email': email,
+          'password': password,
+        }),
+      );
+
+      logger.i('Response body: ${response.body}');
+
+      if (response.statusCode == 200) {
+        final bool isAuthenticated = jsonDecode(response.body);
+        logger.i('is authenticated? =  $isAuthenticated');
+        if (isAuthenticated) {
+          _isAuthenticated = true;
+          logger.i('Login successful');
+        } else {
+          _isAuthenticated = false;
+          logger.i('Login failed: Incorrect email or password');
+        }
+      } else {
+        logger.e('Login request failed with status: ${response.statusCode}');
+      }
+    } catch (e) {
+      logger.e('Error during login: $e');
     }
 
     notifyListeners();
