@@ -33,8 +33,7 @@ class AuthService with ChangeNotifier {
 
       //final String serverAddress = dotenv.get('localhost', fallback: 'localhost');
       final response = await http.post(
-        //Uri.parse('http://$serverAddress:8080/api/auth'),
-        Uri.parse('http://192.168.100.2:8080/api/auth'),
+        Uri.parse('http://localhost:8080/api/auth'),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
         },

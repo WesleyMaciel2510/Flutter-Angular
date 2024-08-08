@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_angular/model/iconList_data.dart';
+import 'package:flutter_angular/src/components/FlatLists/icon_list.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,12 +12,7 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Home Screen'),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/profile');
-          },
-          child: const Text('Go to Profile'),
-        ),
+        child: IconList(eventTypeItems: eventTypeItems),
       ),
     );
   }
