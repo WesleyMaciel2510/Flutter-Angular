@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_angular/src/routes/index.dart';
+import 'package:flutter_angular/src/services/auth_service.dart';
+import 'package:provider/provider.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final authService = Provider.of<AuthService>(context, listen: false);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Profile Screen'),
@@ -85,7 +89,7 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -142,8 +146,13 @@ class ProfileScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     child: Center(
                       child: ElevatedButton(
-                        onPressed: () {
+                        onPressed: () async {
                           // Handle button press
+                          authService.logout();
+
+                          if (!authService.isAuthenticated) {
+                            Navigator.pushReplacementNamed(context, AppRoutes.login);
+                          }
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFFd13d32),
