@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_angular/src/routes/index.dart';
 import 'package:flutter_angular/src/services/auth_service.dart';
+import 'package:logger/logger.dart';
 import 'package:provider/provider.dart';
+
+var logger = Logger();
 
 void main() {
   runApp(
@@ -47,11 +50,11 @@ class MyApp extends StatelessWidget {
         }
       },
       initialRoute: authService.isAuthenticated ? AppRoutes.home : AppRoutes.login,
-      home: Scaffold(
-        /* body: Center(
+      /* home: Scaffold(
+        body: Center(
           child: Text(authService.isAuthenticated ? 'Authenticated' : 'Not Authenticated'),
-        ), */
-      ),
+        ),
+      ), */
     );
   }
 }

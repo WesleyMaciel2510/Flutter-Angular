@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_angular/src/routes/index.dart';
+import 'package:flutter_angular/src/services/auth_service.dart';
 import 'package:logger/logger.dart';
+import 'package:provider/provider.dart';
 
 var logger = Logger();
 
@@ -7,15 +10,17 @@ class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
   _LoginScreenState createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
   bool _obscureText = true;
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
+    final authService = Provider.of<AuthService>(context, listen: false);
     return Scaffold(
       backgroundColor: const Color(0xFFFFFFFF),
       body: Padding(
@@ -26,6 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                const SizedBox(height: 100),
                 // Logo Image
                 Center(
                   child: Container(
@@ -41,13 +47,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 50),
 
                 // Email Input
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: TextField(
-                    decoration: InputDecoration(
+                    controller: _emailController,
+                    decoration: const InputDecoration(
                       labelText: 'Email',
                       border: OutlineInputBorder(),
                       labelStyle: TextStyle(color: Colors.black),
@@ -61,6 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: TextField(
+                    controller: _passwordController,
                     obscureText: _obscureText,
                     decoration: InputDecoration(
                       labelText: 'Password',
@@ -93,7 +101,17 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     onPressed: () {
+                      final email = _emailController.text;
+                      final password = _passwordController.text;
                       logger.i('Login button pressed');
+                      authService.login(email, password);
+
+                      // Navigate to home if login is successful
+                      if (authService.isAuthenticated) {
+                        Navigator.pushReplacementNamed(context, AppRoutes.home);
+                      } else {
+                      logger.i('Show modal');
+                      }
                     },
                     child: const Text(
                       'Login',
