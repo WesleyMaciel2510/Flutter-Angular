@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_angular/src/routes/index.dart';
+import 'package:flutter_angular/src/services/auth_service.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
-  SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(
-      statusBarColor: Color(0xFF6666FF),
-      statusBarIconBrightness: Brightness.light,
-      statusBarBrightness: Brightness.dark,
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => AuthService(),
+      child: const MyApp(),
     ),
   );
 }
@@ -18,6 +17,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final authService = Provider.of<AuthService>(context);
+
     return MaterialApp(
       title: 'Flutter Navigation',
       debugShowCheckedModeBanner: false,
@@ -34,8 +35,23 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: AppRoutes.home,
-      onGenerateRoute: AppRoutes.generateRoute,
+      //onGenerateRoute: AppRoutes.generateRoute,
+      //initialRoute: AppRoutes.home,
+      onGenerateRoute: (settings) {
+        if (settings.name == AppRoutes.login && !authService.isAuthenticated) {
+          return AppRoutes.generateRoute(settings);  // Route to login if not authenticated
+        } else if (authService.isAuthenticated) {
+          return AppRoutes.generateRoute(settings);  // Route to authenticated routes
+        } else {
+          return AppRoutes.generateRoute(settings);  // Route to login if not authenticated
+        }
+      },
+      initialRoute: authService.isAuthenticated ? AppRoutes.home : AppRoutes.login,
+      home: Scaffold(
+        /* body: Center(
+          child: Text(authService.isAuthenticated ? 'Authenticated' : 'Not Authenticated'),
+        ), */
+      ),
     );
   }
 }
@@ -71,7 +87,7 @@ class HexColor extends Color {
   static int _getColorFromHex(String hexColor) {
     hexColor = hexColor.toUpperCase().replaceAll('#', '');
     if (hexColor.length == 6) {
-      hexColor = 'FF' + hexColor;
+      hexColor = 'FF$hexColor';
     }
     return int.parse(hexColor, radix: 16);
   }

@@ -55,7 +55,7 @@ class ExploreEventsSection extends StatelessWidget {
         Align(
           alignment: Alignment.center,
           child: SizedBox(
-            width: MediaQuery.of(context).size.width * 0.5, // Set button width to 50% of screen width
+            width: MediaQuery.of(context).size.width * 0.5,
             child: IconAndLabelButton(
               icon: Icons.place,
               label: "Find Events Near Me",
@@ -67,11 +67,11 @@ class ExploreEventsSection extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 12), // Add vertical padding between buttons
+        const SizedBox(height: 12),
         Align(
           alignment: Alignment.center,
           child: SizedBox(
-            width: MediaQuery.of(context).size.width * 0.5, // Set button width to 50% of screen width
+            width: MediaQuery.of(context).size.width * 0.5,
             child: IconAndLabelButton(
               label: "Choose your city manually",
               color: AppTheme.green40,
