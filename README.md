@@ -2,17 +2,26 @@
 This Flutter app provides a login interface that integrates with a Java Spring Boot server for authentication. 
 The app uses the http package for API calls and implements state management using provider.
 
-## 📱 ScreenShoots
-![screen (10)](https://github.com/user-attachments/assets/f416c912-d907-46f7-880f-ca3ad3d8fdcf)
-![screen (9)](https://github.com/user-attachments/assets/94529a21-bed8-4e63-ab68-0535f2539dfa)
-![screen (8)](https://github.com/user-attachments/assets/6e120ad5-ff40-4bb7-8bba-e1aeb0597d18)
-![screen (7)](https://github.com/user-attachments/assets/cc92b3fa-efb9-416a-8422-30b4a12cbe17)
-![screen (6)](https://github.com/user-attachments/assets/99dcc463-0d12-4ed4-9921-f3f436d520b2)
-![screen (5)](https://github.com/user-attachments/assets/5d54fc85-ebd9-406e-8f0c-0aa9505d1b00)
-![screen (4)](https://github.com/user-attachments/assets/538ac0a1-19f2-4cc0-ac1f-df27691a9bf4)
-![screen (3)](https://github.com/user-attachments/assets/2d6d8f70-0e9e-4a4f-9be1-3c2136bcb2de)
-![screen (2)](https://github.com/user-attachments/assets/165bcf4b-2b03-4494-894b-9ed9f51cf154)
-![screen (1)](https://github.com/user-attachments/assets/64af37e9-0b60-46bb-8afc-f4eee2395fbd)
+## 📱 ScreenShots
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f416c912-d907-46f7-880f-ca3ad3d8fdcf" width="200" />
+  <img src="https://github.com/user-attachments/assets/94529a21-bed8-4e63-ab68-0535f2539dfa" width="200" />
+  <img src="https://github.com/user-attachments/assets/6e120ad5-ff40-4bb7-8bba-e1aeb0597d18" width="200" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cc92b3fa-efb9-416a-8422-30b4a12cbe17" width="200" />
+  <img src="https://github.com/user-attachments/assets/99dcc463-0d12-4ed4-9921-f3f436d520b2" width="200" />
+  <img src="https://github.com/user-attachments/assets/5d54fc85-ebd9-406e-8f0c-0aa9505d1b00" width="200" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/538ac0a1-19f2-4cc0-ac1f-df27691a9bf4" width="200" />
+  <img src="https://github.com/user-attachments/assets/2d6d8f70-0e9e-4a4f-9be1-3c2136bcb2de" width="200" />
+  <img src="https://github.com/user-attachments/assets/165bcf4b-2b03-4494-894b-9ed9f51cf154" width="200" />
+  <img src="https://github.com/user-attachments/assets/64af37e9-0b60-46bb-8afc-f4eee2395fbd" width="200" />
+</p>
  
 ## 📋 Features
 🌍 Location Permissions: The app requests access to the device's fine and coarse location.
