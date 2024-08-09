@@ -3,7 +3,6 @@ import 'package:flutter_angular/hotel_app_theme.dart';
 import 'package:flutter_angular/main.dart';
 import 'package:flutter_angular/model/hotel_list_data.dart';
 import 'package:flutter_angular/src/components/hotel_list_view.dart';
-import 'package:flutter_angular/src/widgets/get_app_bar_ui.dart';
 import 'package:flutter_angular/src/widgets/get_filter_bar_ui.dart';
 import 'package:flutter_angular/src/widgets/get_search_bar_ui.dart';
 import 'package:flutter_angular/src/widgets/get_timedate_ui.dart';

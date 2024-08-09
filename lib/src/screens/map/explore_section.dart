@@ -55,7 +55,7 @@ class ExploreEventsSection extends StatelessWidget {
         Align(
           alignment: Alignment.center,
           child: SizedBox(
-            width: MediaQuery.of(context).size.width * 0.5,
+            width: MediaQuery.of(context).size.width * 0.7,
             child: IconAndLabelButton(
               icon: Icons.place,
               label: "Find Events Near Me",
@@ -71,7 +71,7 @@ class ExploreEventsSection extends StatelessWidget {
         Align(
           alignment: Alignment.center,
           child: SizedBox(
-            width: MediaQuery.of(context).size.width * 0.5,
+            width: MediaQuery.of(context).size.width * 0.7,
             child: IconAndLabelButton(
               label: "Choose your city manually",
               color: AppTheme.green40,

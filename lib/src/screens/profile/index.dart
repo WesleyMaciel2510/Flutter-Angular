@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_angular/src/components/Buttons/custom_button.dart';
 import 'package:flutter_angular/src/routes/index.dart';
 import 'package:flutter_angular/src/services/auth_service.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -10,6 +11,23 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final authService = Provider.of<AuthService>(context, listen: false);
+
+    //camera Permission =================================================
+
+  Future<void> requestCameraPermission() async {
+    final status = await Permission.camera.request();
+    if (status.isGranted) {
+      logger.i('Camera permission granted');
+    } else if (status.isDenied) {
+      logger.i('Camera permission denied');
+    } else if (status.isPermanentlyDenied) {
+      logger.i('Camera permission permanently denied. Please enable it in settings.');
+      // Optionally, you can open app settings
+      await openAppSettings();
+    }
+  }
+
+    //===================================================================
     return Scaffold(
       appBar: AppBar(
         title: const Text('Profile Screen'),
@@ -75,6 +93,7 @@ class ProfileScreen extends StatelessWidget {
              },),
             CustomButton (title: 'Get Camera Permission', action: () { 
               logger.i('Camera Permission button pressed');
+                requestCameraPermission();
              },),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
