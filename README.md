@@ -24,25 +24,29 @@ The app uses the http package for API calls and implements state management usin
 </p>
  
 ## 📋 Features
-🌍 Location Permissions: The app requests access to the device's fine and coarse location.
-📸 Camera Access: Camera permission is required for potential future features.
-🔐 User Authentication: Handles user login with email and password, communicating with a Spring Boot backend server.
-📝 Logging: Uses the logger package for detailed logging of events and errors.
-🌐 Environment Variables: Support for loading environment variables using flutter_dotenv.
+
+<ul style="list-style-type: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap;">
+  <li style="margin-right: 20px;">🌍 Location Permissions: The app requests access to the device's fine and coarse location.</li>
+  <li style="margin-right: 20px;">📸 Camera Access: Camera permission is required for potential future features.</li>
+  <li style="margin-right: 20px;">🔐 User Authentication: Handles user login with email and password, communicating with a Spring Boot backend server.</li>
+  <li style="margin-right: 20px;">📝 Logging: Uses the logger package for detailed logging of events and errors.</li>
+  <li style="margin-right: 20px;">🌐 Environment Variables: Support for loading environment variables using flutter_dotenv.</li>
+</ul>
 
 ## 🛠️ Dependencies
-This project uses the following Dart packages:
 
-✅ permission_handler: To request permissions at runtime.
-✅ cupertino_icons: For iOS-styled icons.
-✅ http: For making HTTP requests.
-✅ flutter_lints: For linting Dart code.
-✅ logger: For logging events and errors.
-✅ intl: For internationalization and formatting.
-✅ font_awesome_flutter: For using FontAwesome icons.
-✅ flutter_rating_bar: For displaying rating bars.
-✅ provider: For state management.
-✅ flutter_dotenv: For loading environment variables from a .env file.
+<ul style="list-style-type: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap;">
+  <li style="margin-right: 20px;">✅ permission_handler: To request permissions at runtime.</li>
+  <li style="margin-right: 20px;">✅ cupertino_icons: For iOS-styled icons.</li>
+  <li style="margin-right: 20px;">✅ http: For making HTTP requests.</li>
+  <li style="margin-right: 20px;">✅ flutter_lints: For linting Dart code.</li>
+  <li style="margin-right: 20px;">✅ logger: For logging events and errors.</li>
+  <li style="margin-right: 20px;">✅ intl: For internationalization and formatting.</li>
+  <li style="margin-right: 20px;">✅ font_awesome_flutter: For using FontAwesome icons.</li>
+  <li style="margin-right: 20px;">✅ flutter_rating_bar: For displaying rating bars.</li>
+  <li style="margin-right: 20px;">✅ provider: For state management.</li>
+  <li style="margin-right: 20px;">✅ flutter_dotenv: For loading environment variables from a .env file.</li>
+</ul>
 
 ## 🔐 Permissions
 The app requires the following permissions, as declared in the AndroidManifest.xml file:
