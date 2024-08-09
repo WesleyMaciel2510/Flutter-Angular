@@ -131,7 +131,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     'Forgot my password',
                     style: TextStyle(
                       decoration: TextDecoration.underline,
-                      color: Colors.black,
+                      decorationColor: Colors.blue,
+                      color: Colors.blue,
                       fontSize: 20,
                     ),
                   ),
@@ -147,7 +148,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     'Create an account',
                     style: TextStyle(
                       decoration: TextDecoration.underline,
-                      color: Colors.black,
+                      decorationColor: Colors.blue,
+                      color: Colors.blue,
                       fontSize: 20,
                     ),
                   ),

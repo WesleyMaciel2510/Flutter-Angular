@@ -8,7 +8,9 @@ import 'package:logger/logger.dart';
 var logger = Logger();
 
 class AuthService with ChangeNotifier {
-  bool _isAuthenticated = true;
+  //line to test and do have to log in every time
+  //bool _isAuthenticated = true;
+  bool _isAuthenticated = false;
   //bool _isEnvLoaded = false;
 
   bool get isAuthenticated => _isAuthenticated;

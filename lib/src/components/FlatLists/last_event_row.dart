@@ -17,22 +17,25 @@ class LastEventRow extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
-    final int adjustedEndIndex = endIndex >= events.length ? events.length - 1 : endIndex;
+Widget build(BuildContext context) {
+  final int adjustedEndIndex = endIndex >= events.length ? events.length - 1 : endIndex;
 
-    final List<AllEventsItem> slicedEvents = events.sublist(startIndex, adjustedEndIndex + 1);
+  final List<AllEventsItem> slicedEvents = events.sublist(startIndex, adjustedEndIndex + 1);
 
-    return Container(
-      padding: const EdgeInsets.all(15.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-          "Most Visited Events in the Last 24h!",
-            style: TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-              color: Colors.blue[700],
+  return Container(
+    padding: const EdgeInsets.all(15.0),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          child: Text(
+            "Most Visited Events",
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue[700],
+              ),
             ),
           ),
           const SizedBox(height: 10.0),

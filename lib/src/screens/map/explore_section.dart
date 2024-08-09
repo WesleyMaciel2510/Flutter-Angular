@@ -28,7 +28,7 @@ class ExploreEventsSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const Padding(
-          padding: EdgeInsets.symmetric(vertical: 12),
+          padding: EdgeInsets.symmetric(vertical: 1),
           child: Text(
             "Explore events near you",
             style: TextStyle(
@@ -67,7 +67,7 @@ class ExploreEventsSection extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 12),
+        /* const SizedBox(height: 8),
         Align(
           alignment: Alignment.center,
           child: SizedBox(
@@ -81,7 +81,7 @@ class ExploreEventsSection extends StatelessWidget {
               icon: null,
             ),
           ),
-        ),
+        ), */
       ],
     );
   }

@@ -8,38 +8,41 @@ class BottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomAppBar(
       color: const Color(0xFF6666FF),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.home),
-            color: Colors.white,
-            onPressed: () {
-              Navigator.of(context).pushNamed(AppRoutes.home);
-            },
-          ),
-          IconButton(
-            icon: const Icon(Icons.location_on),
-            color: Colors.white,
-            onPressed: () {
-              Navigator.of(context).pushNamed(AppRoutes.map);
-            },
-          ),
-          IconButton(
-            icon: const Icon(Icons.account_balance_wallet_rounded),
-            color: Colors.white,
-            onPressed: () {
-              Navigator.of(context).pushNamed(AppRoutes.wallet);
-            },
-          ),
-          IconButton(
-            icon: const Icon(Icons.account_box),
-            color: Colors.white,
-            onPressed: () {
-              Navigator.of(context).pushNamed(AppRoutes.profile);
-            },
-          ),
-        ],
+      child: SizedBox(
+        height: 50.0,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            IconButton(
+              icon: const Icon(Icons.home),
+              color: Colors.white,
+              onPressed: () {
+                Navigator.of(context).pushNamed(AppRoutes.home);
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.location_on),
+              color: Colors.white,
+              onPressed: () {
+                Navigator.of(context).pushNamed(AppRoutes.map);
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.account_balance_wallet_rounded),
+              color: Colors.white,
+              onPressed: () {
+                Navigator.of(context).pushNamed(AppRoutes.wallet);
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.account_box),
+              color: Colors.white,
+              onPressed: () {
+                Navigator.of(context).pushNamed(AppRoutes.profile);
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

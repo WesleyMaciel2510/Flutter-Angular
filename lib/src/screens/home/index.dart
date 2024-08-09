@@ -35,14 +35,13 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             IconList(eventTypeItems: eventTypeItems),
-            const SizedBox(height: 20),
+            const SizedBox(height: 5),
             LastEventRow(
               events: allEvents,
-              startIndex: 0,
-              endIndex: 9,
+              startIndex: 4,
+              endIndex: 14,
               onItemClick: _handleItemClick,
             ),
-            const SizedBox(height: 20),
             Text(
               _selectedItemName.isNotEmpty
                   ? _selectedItemName
@@ -53,6 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.blue[700],
               ),
             ),
+            const SizedBox(height: 10),
           ],
         ),
       ),

@@ -13,7 +13,7 @@ class IconList extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 25.0),
+          padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
           child: Text(
             'Go for it, life is now!',
             style: TextStyle(
