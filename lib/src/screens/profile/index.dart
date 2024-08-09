@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_angular/src/components/Buttons/custom_button.dart';
 import 'package:flutter_angular/src/routes/index.dart';
 import 'package:flutter_angular/src/services/auth_service.dart';
 import 'package:provider/provider.dart';
@@ -69,25 +70,12 @@ class ProfileScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
-              child: ElevatedButton(
-                onPressed: () {
-                  // TODO: Handle button press
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                ),
-                child: const Text(
-                  "Edit Your Profile",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ),
+            CustomButton (title: 'Edit Your Profile', action: () { 
+              logger.i('Edit Profile button pressed');
+             },),
+            CustomButton (title: 'Get Camera Permission', action: () { 
+              logger.i('Camera Permission button pressed');
+             },),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Column(

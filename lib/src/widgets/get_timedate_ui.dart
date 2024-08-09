@@ -40,7 +40,7 @@ Widget getTimeDateUI({
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 16,
-                              color: Colors.grey.withOpacity(0.8)),
+                              color: Colors.black.withOpacity(0.8)),
                         ),
                         const SizedBox(
                           height: 8,
@@ -96,7 +96,7 @@ Widget getTimeDateUI({
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 16,
-                              color: Colors.grey.withOpacity(0.8)),
+                              color: Colors.black.withOpacity(0.8)),
                         ),
                         const SizedBox(
                           height: 8,
