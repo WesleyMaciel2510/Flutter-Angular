@@ -2,6 +2,14 @@
 This Flutter app provides a login interface that integrates with a Java Spring Boot server for authentication. 
 The app uses the http package for API calls and implements state management using provider.
 
+## 📱 Video
+<ul style="list-style-type: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap;">
+  <li style="margin-right: 20px;">🌍 Demonstration to Prove that the Application was tested and it is working with the SpringBoot Server.</li>
+
+https://github.com/user-attachments/assets/857a0ca1-3a98-466d-83a7-ecbb5f24fc2c
+
+</ul>
+
 ## 📱 ScreenShots
 
 <p align="left">
