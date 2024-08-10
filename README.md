@@ -59,10 +59,17 @@ https://github.com/user-attachments/assets/857a0ca1-3a98-466d-83a7-ecbb5f24fc2c
 ## 🔐 Permissions
 The app requires the following permissions, as declared in the AndroidManifest.xml file:
 
+```xml
 <ul style="list-style-type: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap;">
-<li style="margin-right: 20px;"> <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> </li>
-<li style="margin-right: 20px;"><uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> </li>
-<li style="margin-right: 20px;"><uses-permission android:name="android.permission.CAMERA"/> </li>
+    <li style="margin-right: 20px;">
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    </li>
+    <li style="margin-right: 20px;">
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    </li>
+    <li style="margin-right: 20px;">
+        <uses-permission android:name="android.permission.CAMERA"/>
+    </li>
 </ul>
 
 ## 🏗️ Project Structure
